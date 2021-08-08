@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Selenium4_Explore</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>11</java.version>
+<!--        <selenium-java-version>4.0.0-beta-4</selenium-java-version>-->
+        <selenium-java-version>3.141.59</selenium-java-version>
+        <cucumber-junit-version>6.10.4</cucumber-junit-version>
+        <cucumber-java-version>6.10.4</cucumber-java-version>
+        <cucumber-spring-version>6.10.4</cucumber-spring-version>
+        <cucumber-picocontainer-version>6.10.4</cucumber-picocontainer-version>
+        <cucumber-core-version>6.10.4</cucumber-core-version>
+        <cucumber-reporting-masterthought-version>5.5.3</cucumber-reporting-masterthought-version>
+        <maven-cucumber-reporting-masterthought-version>5.5.0</maven-cucumber-reporting-masterthought-version>
+        <webdrivermanager-version>4.4.3</webdrivermanager-version>
+        <testng-version>7.4.0</testng-version>
+        <maven-surefire-plugin_-version>2.22.2</maven-surefire-plugin_-version>
+        <cucumber-testng-version>6.10.4</cucumber-testng-version>
+    </properties>
+  <dependencies>
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+          <version>${selenium-java-version}</version>
+      </dependency>
+      <dependency>
+          <groupId>net.lightbody.bmp</groupId>
+          <artifactId>browsermob-core</artifactId>
+          <version>2.1.5</version>
+      </dependency>
+  </dependencies>
+
+</project>
