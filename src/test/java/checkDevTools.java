@@ -34,6 +34,7 @@ public class checkDevTools
         BrowserMobProxyServer proxy = new BrowserMobProxyServer();
         proxy.setTrustAllServers(true);
         proxy.start();
+        System.out.println("Port of the browsermob proxy server is  : "+proxy.getPort());
         //Create the Selenium proxy to store all browser network communication.
         Proxy seleniumProxy = ClientUtil.createSeleniumProxy(proxy);
         //Set the capturing capability of Selenium Proxy.
