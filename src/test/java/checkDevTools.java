@@ -1,8 +1,5 @@
 
-import net.lightbody.bmp.BrowserMobProxyServer;
-import net.lightbody.bmp.client.ClientUtil;
-import net.lightbody.bmp.core.har.Har;
-import net.lightbody.bmp.proxy.CaptureType;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class checkDevTools
 {
-    public static void main(String args[]) throws IOException, InterruptedException {
+ /*   public static void main(String args[]) throws IOException, InterruptedException {
         System.out.println("Check devtools");
         WebDriver driver;
         String projectPath = System.getProperty("user.dir");
@@ -47,6 +44,7 @@ public class checkDevTools
         captureTypes.add(CaptureType.RESPONSE_CONTENT);
         captureTypes.add(CaptureType.RESPONSE_COOKIES);
         captureTypes.add(CaptureType.RESPONSE_HEADERS);
+
         //Set the Capture Type in Selenium Proxy
         proxy.enableHarCaptureTypes(captureTypes);
         //Set browser capability for Chrome
@@ -72,14 +70,14 @@ public class checkDevTools
 
 
 
-/*
+*//*
         //get devtools and create a session
         DevTools devTools = ((ChromiumDriver)driver).getDevTools();
         devTools.createSession();
         //send a command to enable the logs
         devTools.send(Log.enable());
         //Add listener for the logs
-*//*        devTools.addListener(Log.entryAdded(),logEntry -> {
+*//**//*        devTools.addListener(Log.entryAdded(),logEntry -> {
             System.out.println(logEntry.getNetworkRequestId());
             System.out.println("---------------------------");
             System.out.println("source = "+logEntry.getSource());
@@ -87,26 +85,26 @@ public class checkDevTools
             System.out.println("text = "+logEntry.getText());
         //Load AUT
             driver.get("http://www.google.com");
-        });*//*
+        });*//**//*
         devTools.send(Network.enable(Optional.of(1000000),Optional.empty(),Optional.empty()));
         devTools.send(emulateNetworkConditions(false,100,1000,2000,Optional.of(ConnectionType.WIFI)));
         devTools.addListener(Log.entryAdded(),logEntry -> {
                     System.out.println(logEntry.getNetworkRequestId());
                     System.out.println("---------------------------");
-                   *//* System.out.println("source = " + logEntry.getSource());
+                   *//**//* System.out.println("source = " + logEntry.getSource());
                     System.out.println("level = " + logEntry.getLevel());
-                    System.out.println("text = " + logEntry.getText());*//*
-                });*/
-/*        String AUTUrl = "http://www.google.com";
+                    System.out.println("text = " + logEntry.getText());*//**//*
+                });*//*
+*//*        String AUTUrl = "http://www.google.com";
         driver.get(AUTUrl);
        // String scriptToExecute = "var performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}; var network = performance.getEntries() || {}; return network;";
        // String scriptToExecute = "var req = new XMLHttpRequest();req.open('GET', document.location, false);req.send(null);return req.getAllResponseHeaders()";
-       *//* String scriptToExecute = "var req = new XMLHttpRequest();" +
+       *//**//* String scriptToExecute = "var req = new XMLHttpRequest();" +
                 "req.open('GET', document.location, false);" +
                 "req.send(null);" +
                 "return req.responseXML";
         String netData = ((JavascriptExecutor)driver).executeScript(scriptToExecute).toString();
-        System.out.println(netData);*//*
+        System.out.println(netData);*//**//*
         // wait of 8 seconds
         Thread.sleep(8000);
         //driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
@@ -118,7 +116,7 @@ public class checkDevTools
         cn.connect();
         String res = cn.getResponseMessage();
         System.out.println("Http response message: " + res);
-        driver.close();*/
+        driver.close();*//*
 
 
 
@@ -128,5 +126,5 @@ public class checkDevTools
 
 
 
-    }
+    }*/
 }
